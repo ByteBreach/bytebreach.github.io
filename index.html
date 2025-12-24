@@ -3,214 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Welcome to Hacker's Lair | ByteBreach. Discover cutting-edge cybersecurity solutions and innovative approaches to protect your digital assets.">
-    <meta name="keywords" content="cybersecurity, hackers, ByteBreach, security solutions, digital threats">
+
+    <meta name="description" content="ByteBreach is a cybersecurity and privacy-focused initiative building secure, open-source tools and solutions for the modern internet.">
+    <meta name="keywords" content="ByteBreach, cybersecurity, privacy, security tools, open source">
     <meta name="author" content="ByteBreach">
     <meta name="robots" content="index, follow">
-    <title>Hacker's Lair | ByteBreach</title>
+
+    <title>ByteBreach | Cybersecurity & Privacy</title>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
     <style>
         body {
-            background-color: #111;
-            color: #00ff00;
-            font-family: 'Courier New', Courier, monospace;
+            font-family: Arial, Helvetica, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            background-color: #f8f9fb;
+            color: #333;
             line-height: 1.6;
         }
 
+        header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e1e4e8;
+            padding: 20px 0;
+        }
+
         .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
-            animation: pulse 1s infinite alternate;
+            max-width: 1000px;
+            margin: auto;
+            padding: 0 20px;
         }
 
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-            }
-            100% {
-                transform: scale(1.02);
-            }
+        header h1 {
+            margin: 0;
+            font-size: 1.8em;
+            color: #1f2933;
         }
 
-        h1 {
-            font-size: 3em;
+        header p {
+            margin: 5px 0 0;
+            color: #6b7280;
+        }
+
+        section {
+            padding: 50px 0;
+        }
+
+        h2 {
+            color: #1f2933;
             margin-bottom: 20px;
-            color: #ff0000;
-            text-transform: uppercase;
         }
 
         p {
-            font-size: 1.2em;
-            margin-bottom: 20px;
-            text-align: justify;
+            max-width: 800px;
         }
 
-        .about-section {
-            margin-bottom: 40px;
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
         }
 
         .feature {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-            color: #00ff00;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 6px;
+            border: 1px solid #e1e4e8;
         }
 
-        .feature-icon {
-            font-size: 2em;
-            margin-right: 10px;
-            color: #ff0000;
+        .feature i {
+            color: #2563eb;
+            font-size: 1.5em;
+            margin-bottom: 10px;
         }
 
-        .social-links {
-            margin-top: 20px;
-        }
-
-        .social-icon {
-            display: inline-block;
-            margin: 0 10px;
-            font-size: 2em;
-            color: #00ff00;
-            transition: color 0.3s ease;
-        }
-
-        .social-icon:hover {
-            color: #ff0000;
+        .feature h3 {
+            margin: 10px 0;
+            font-size: 1.1em;
         }
 
         footer {
-            margin-top: 50px;
-            font-size: 0.8em;
-            color: #ccc;
+            background-color: #ffffff;
+            border-top: 1px solid #e1e4e8;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 0.85em;
+            color: #6b7280;
         }
 
+        .social-links a {
+            margin: 0 10px;
+            color: #2563eb;
+            font-size: 1.3em;
+            text-decoration: none;
+        }
+
+        .notice {
+            background-color: #eef2ff;
+            border-left: 4px solid #2563eb;
+            padding: 15px;
+            margin-top: 30px;
+            max-width: 800px;
+        }
+
+        /* Greeting */
         .greeting-box {
             display: none;
             position: fixed;
             bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: rgba(0, 0, 0, 0.8);
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 5px;
-            z-index: 1000;
-            animation: fade-in 0.5s ease-out;
+            right: 20px;
+            background: #ffffff;
+            border: 1px solid #e1e4e8;
+            padding: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            max-width: 300px;
         }
 
-        .show-greeting {
+        .greeting-box.show {
             display: block;
         }
 
-        .greeting-content {
-            margin-bottom: 10px;
-        }
-
-        .close-btn {
-            background-color: #ff0000;
-            color: #fff;
+        .greeting-box button {
+            margin-top: 10px;
+            background: #2563eb;
+            color: #ffffff;
             border: none;
-            padding: 5px 10px;
-            border-radius: 3px;
+            padding: 6px 10px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            border-radius: 4px;
         }
 
-        .close-btn:hover {
-            background-color: #e60000;
+        .greeting-box button:hover {
+            background: #1d4ed8;
         }
 
-        @keyframes fade-in {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-        @media screen and (max-width: 768px) {
-            .container {
-                padding: 10px;
-            }
-
-            h1 {
-                font-size: 2em;
-            }
-
-            p {
-                font-size: 1em;
-            }
-
-            .feature-icon {
-                font-size: 1.5em;
-            }
-
-            .social-icon {
-                font-size: 1.5em;
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.4em;
             }
         }
     </style>
 </head>
 
 <body>
+
+<header>
     <div class="container">
-        <h1>Welcome to Hacker's Lair | ByteBreach</h1>
-        <div class="about-section">
-            <p>ByteBreach is a leading cybersecurity firm dedicated to protecting businesses and individuals from digital threats. Our team of experts specializes in providing cutting-edge security solutions, empowering organizations to navigate the digital landscape with confidence.</p>
-            <p>At ByteBreach, we believe that cybersecurity is more than just defense—it's about driving innovation, fostering trust, and building resilience in an ever-evolving digital world. Our mission is to equip our clients with the tools and knowledge they need to stay ahead of cybercriminals and secure their digital assets.</p>
+        <h1>ByteBreach</h1>
+        <p>Cybersecurity & Privacy-Focused Open Source</p>
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        <h2>About ByteBreach</h2>
+        <p>
+            ByteBreach is a cybersecurity initiative focused on building secure,
+            privacy-respecting, and open-source tools for developers, individuals,
+            and organizations.
+        </p>
+        <p>
+            Our work emphasizes transparency, minimal data collection, and
+            user-controlled security without invasive tracking.
+        </p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>What We Build</h2>
+        <div class="features">
+            <div class="feature">
+                <i class="fas fa-lock"></i>
+                <h3>Privacy-First Tools</h3>
+                <p>Security solutions that respect user privacy by design.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-code"></i>
+                <h3>Open Source Software</h3>
+                <p>Fully transparent code that anyone can audit and improve.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-user-shield"></i>
+                <h3>Tor & Anonymity Solutions</h3>
+                <p>Tools that help users publish and protect services anonymously.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-book"></i>
+                <h3>Education & Research</h3>
+                <p>Learning resources and experiments around security.</p>
+            </div>
         </div>
-        <div class="feature">
-            <i class="fas fa-lock feature-icon"></i>
-            <span>Cutting-edge security solutions</span>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Privacy Commitment</h2>
+        <div class="notice">
+            <strong>We respect your privacy.</strong><br>
+            This website does not collect personal data.
+            A small local cookie is used only to remember whether the welcome message
+            has been shown.
         </div>
-        <div class="feature">
-            <i class="fas fa-globe feature-icon"></i>
-            <span>Global reach and expertise</span>
-        </div>
-        <div class="feature">
-            <i class="fas fa-lightbulb feature-icon"></i>
-            <span>Innovative approaches to cybersecurity</span>
-        </div>
-        <div class="feature">
-            <i class="fas fa-shield-alt feature-icon"></i>
-            <span>Trustworthy and reliable services</span>
-        </div>
-        <div class="feature">
-            <i class="fas fa-graduation-cap feature-icon"></i>
-            <span>Education and training programs</span>
-        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Connect</h2>
         <div class="social-links">
-            <a href="https://www.instagram.com/mr.fidal" class="social-icon"><i class="fab fa-instagram"></i></a>
-            <a href="https://twitter.com/mrfidal" class="social-icon"><i class="fab fa-twitter"></i></a>
-            <a href="https://github.com/ByteBreach" class="social-icon"><i class="fab fa-github"></i></a>
-            <a href="https://t.me/mrfidal" class="social-icon"><i class="fab fa-telegram"></i></a>
+            <a href="https://github.com/ByteBreach" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://twitter.com/mrfidal" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/mr.fidal" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://t.me/mrfidal" title="Telegram"><i class="fab fa-telegram"></i></a>
         </div>
-        <footer>&copy; 2024 ByteBreach | Hacker's Lair</footer>
     </div>
+</section>
 
-    <div id="greetingBox" class="greeting-box">
-        <div class="greeting-content">
-            <p>Welcome to Hacker's Lair | ByteBreach!</p>
-        </div>
-        <button id="closeGreeting" class="close-btn">Close</button>
-    </div>
+<footer>
+    © 2024 ByteBreach — Open, Secure, Privacy-First
+</footer>
 
-    <script>
-const hasVisited = document.cookie.indexOf('hasVisited=true') > -1;
+<div id="greetingBox" class="greeting-box">
+    <strong>Welcome to ByteBreach</strong>
+    <p>Open-source security tools built with privacy in mind.</p>
+    <button id="closeGreeting">Close</button>
+</div>
 
-if (!hasVisited) {
-    document.getElementById('greetingBox').classList.add('show-greeting');
-}
+<script>
+    const seen = document.cookie.includes("seen=true");
 
-document.getElementById('closeGreeting').addEventListener('click', function () {
-    document.getElementById('greetingBox').classList.remove('show-greeting');
-    document.cookie = 'hasVisited=true; max-age=604800';
-});
+    if (!seen) {
+        document.getElementById("greetingBox").classList.add("show");
+    }
+
+    document.getElementById("closeGreeting").onclick = () => {
+        document.getElementById("greetingBox").classList.remove("show");
+        document.cookie = "seen=true; max-age=604800; path=/";
+    };
 </script>
+
 </body>
 </html>
